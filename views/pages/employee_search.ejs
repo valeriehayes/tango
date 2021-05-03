@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>Search</h1>
+    <p>employee search</p>
+ 
+    <div id="table">
+      <table class="table table-bordered table-striped">
+        <tr>
+          <th>Employee Id</th>
+          <th>Employee Username</th>
+          <th>Employee First Name</th>
+          <th>Employee Last Name</th>
+          <th>Role</th>
+          <th>Is Active?</th>
+        </tr>
+        <% employees.forEach(function(employee){ %>
+        <tr>
+          <td><%= employee[0] %></td>
+          <td><%= employee[1] %></td>
+          <td><%= employee[2] %></td>
+          <td><%= employee[3] %></td>
+          <td><%= employee[4] %></td>
+          <td><%= employee[5] %></td>
+        </tr>
+        <% }); %>
+      </table>
+    </div>
+  </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
